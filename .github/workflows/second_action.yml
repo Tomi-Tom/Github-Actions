@@ -21,3 +21,4 @@ jobs:
     steps:
       - run: |
           echo "Hello from $RUNNER_OS"
+          make
