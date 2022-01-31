@@ -14,7 +14,6 @@ int main(int ac, char **av)
         return 84;
     }
     my_printf("Hello World %d\n", 42);
-    my_printf("BIte %d\n", 42);
     my_putstr(av[0]);
     my_putchar('\n');
     my_put_nbr(ac);
