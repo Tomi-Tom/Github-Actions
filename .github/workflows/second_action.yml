@@ -1,4 +1,4 @@
-name: My_First_Action
+name: Multi OS
 
 on:
   push:
@@ -7,22 +7,10 @@ on:
   workflow_dispatch:
 
 jobs:
-  Greetings:
+  WinduntuOS:
+    if: "!contains(github.event.head_commit.message, '[skip ci]')"
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
-
-      - name: Say Hello World
-        run: echo Hello world!
-        
-      - name: create a directory named plop
-        run: mkdir plop
-        
-      - name: redirect ls in a file
-        run: ls -a > log.txt
-        
-      - name: move log.txt in plop
-        run: mv log.txt plop
-        
-      - name: ls plop
-        run: ls plop
+      - run: |
+          echo "Hello from < nom de l'os >"
