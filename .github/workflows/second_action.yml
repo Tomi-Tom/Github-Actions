@@ -21,3 +21,6 @@ jobs:
     steps:
       - run: |
           echo "Hello from $RUNNER_OS"
+      - run: |
+          make
+        working-directory: ./
