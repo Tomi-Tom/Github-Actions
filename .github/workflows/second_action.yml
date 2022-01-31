@@ -1,0 +1,28 @@
+name: My_First_Action
+
+on:
+  push:
+    branches: [ main ]
+
+  workflow_dispatch:
+
+jobs:
+  Greetings:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: Say Hello World
+        run: echo Hello world!
+        
+      - name: create a directory named plop
+        run: mkdir plop
+        
+      - name: redirect ls in a file
+        run: ls -a > log.txt
+        
+      - name: move log.txt in plop
+        run: mv log.txt plop
+        
+      - name: ls plop
+        run: ls plop
