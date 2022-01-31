@@ -2,7 +2,8 @@ name: Multi OS
 
 on:
   push:
-    branches: [ main ]
+    branches: |
+      - main
 
   workflow_dispatch:
 
