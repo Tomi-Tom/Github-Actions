@@ -15,5 +15,17 @@ jobs:
     steps:
       - uses: actions/checkout@v2
 
-      - name: Run a one-line script
+      - name: Say Hello World
         run: echo Hello world!
+        
+      - name: create a directory named plop
+        run: mkdir plop
+        
+      - name: redirect ls in a file
+        run: ls -a > log.txt
+        
+      - name: move log.txt in plop
+        run: mv log.txt plop
+        
+      - name: ls plop
+        run: ls plop
