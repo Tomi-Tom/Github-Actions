@@ -15,9 +15,9 @@ jobs:
     strategy:
       matrix:
         os: [ubuntu-latest, windows-latest, macOS-latest]
-    if: "!contains(github.event.head_commit.message, '[bite]')"
+    if: "!contains(github.event.head_commit.message, '[skip compatibility]')"
     runs-on: ${{ matrix.os }}
        
     steps:
       - run: |
-          echo "Hello from < nom de l'os >"
+          echo "Hello from $RUNNER_OS"
