@@ -16,11 +16,12 @@ jobs:
       matrix:
         os: [ubuntu-latest, windows-latest, macOS-latest]
     if: "!contains(github.event.head_commit.message, '[skip compatibility]')"
-    runs-on: ${{ matrix.os }}
+    runs-on: ubuntu-latest
        
     steps:
       - run: |
           echo "Hello from $RUNNER_OS"
       - run: |
+          ls
           make
         working-directory: ./
